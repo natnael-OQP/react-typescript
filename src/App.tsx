@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import AddToList from "./components/addToList";
 import List from "./components/List";
 import { IState } from "./type";
+
 
 function App() {
 	const [peoples, setPeoples] = useState<IState["people"]>([
@@ -18,9 +20,12 @@ function App() {
 		},
 	]);
 	return (
-		<div className="text-center mt-10">
-			<h1 className="my-10 text-4xl font-semibold text-slate-800">peoples</h1>
+		<div className="text-center mt-3">
+			<h1 className="my-5 text-xl font-semibold text-slate-800 capitalize text-purple-500 font-serif">
+				only quality people
+			</h1>
 			<List people={peoples} />
+			<AddToList peoples={peoples} setPeoples={setPeoples} />
 		</div>
 	);
 }
