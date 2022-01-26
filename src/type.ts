@@ -5,5 +5,5 @@ export type IState = {
         age: number, 
         url: string
         note?: string
-    }[]|null
+    }[]
 }
