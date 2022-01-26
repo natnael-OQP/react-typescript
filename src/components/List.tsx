@@ -5,8 +5,8 @@ const List: React.FC<IState> = ({ people }) => {
 	const RenderList = (): JSX.Element => {
 		return (
 			<>
-				{people?.map((person) => (
-					<li className=" cursor-pointer my-2 shadow-md rounded-md bg-gray-100 p-1 border border-gray-900 flex items-center justify-between max-w-3xl mx-auto text-gray-600 font-normal ">
+				{people?.map((person,i) => (
+					<li key={person.url+i} className=" cursor-pointer my-2 shadow-md rounded-md bg-gray-100 p-1 border border-gray-900 flex items-center justify-between max-w-3xl mx-auto text-gray-600 font-normal ">
 						<div className="flex items-center space-x-3 flex-[20] shrink-0">
 							<img
 								className="w-12 h-12 rounded-full shrink-0"
