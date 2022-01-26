@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .input{
+        @apply px-2 py-[6px] shadow-sm text-base font-medium text-gray-600 w-full outline-none border border-gray-700 rounded-sm overflow-hidden
+    }
+}
